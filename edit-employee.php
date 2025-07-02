@@ -1,5 +1,5 @@
 <?php
-include 'databaase.php';
+include 'database.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -72,7 +72,7 @@ if (isset($_GET['id'])) {
 
         $updateEmployee .= " WHERE id = '$id'";
 
-        $updateDocuments = "UPDATE mew_document_deatils SET 
+        $updateDocuments = "UPDATE new_documnet_details_users SET 
             pan_number = '$pannumber', 
             adhar_number = '$adhaarnumber' 
             WHERE employee_id = '$id'";
@@ -100,7 +100,7 @@ if (isset($_GET['id'])) {
     if ($result && $result->num_rows > 0) {
         $employee = $result->fetch_assoc();
 
-        $docSql = "SELECT * FROM mew_document_deatils WHERE employee_id = '$id'";
+        $docSql = "SELECT * FROM new_documnet_details_users WHERE employee_id = '$id'";
         $docResult = $conn->query($docSql);
         if ($docResult && $docResult->num_rows > 0) {
             $document = $docResult->fetch_assoc();
@@ -486,11 +486,10 @@ $conn->close();
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/select2.min.js"></script>
-    <script src="./js/script.js" defer></script>
+  
 </body>
 
-
+<?php
+    include('./includes/script.php');
+    ?>
 </html>

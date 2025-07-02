@@ -1,10 +1,10 @@
 <?php
-include 'databaase.php';
+include 'database.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = $_GET['id'];
 
-    $sql = "SELECT id, name, mobile_number, official_email, personal_email, home_number, department, desgination, joning_year, total_expierence, salary, relieving_date, noc, experience_letter FROM new_employ_users WHERE id = '$id'";
+    $sql = "SELECT id, name, mobile_number, official_email, personal_email, home_number, department, desgination, joning_year, total_expierence, salary, relieving_date, noc, experience_letter FROM employee_details WHERE id = '$id'";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
@@ -14,7 +14,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         exit;
     }
 
-    $documentQuery = "SELECT id, pan_number, adhar_number, upload_adhar, upload_pan FROM new_document_users WHERE employee_id = '$id'";
+    $documentQuery = "SELECT id, pan_number, adhar_number, upload_adhar, upload_pan FROM new_documnet_details_users WHERE employee_id = '$id'";
     $docResult = $conn->query($documentQuery);
 
     if ($docResult && $docResult->num_rows > 0) {
@@ -272,9 +272,9 @@ $conn->close();
         </div>
     </div>
 
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/select2.min.js"></script>
-    <script src="./js/script.js" defer></script>
+   
 </body>
-
+<?php
+    include('./includes/script.php');
+    ?>
 </html>

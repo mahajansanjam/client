@@ -193,7 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
       echo "New record created successfully. Last inserted ID is: " . $last_id . "<br>";
 
 
-      $bankSql = "INSERT INTO new_document_users (
+      $bankSql = "INSERT INTO new_documnet_details_users (
                         pan_number, adhar_number, upload_adhar, upload_pan, employee_id
                     ) VALUES (
                         '$pan_number', '$adhar_number', '$upload_adhar_card','$upload_pan', '$last_id'
