@@ -69,6 +69,15 @@ $conn->close();
                                     </span></a></li>
                         </ul>
                     </li>
+
+                    <li><a href="create_role.php">
+                            <img src="./images/home.png" alt="">
+                            <span class="left-icon-hide">Create Role</span></a>
+                    </li>
+                    <li><a href="assign_rights.php">
+                            <img src="./images/home.png" alt="">
+                            <span class="left-icon-hide">Assign Rights</span></a>
+                    </li>
                     <li class="logout-icon">
                         <a href="logout.php">
                             <img src="./images/out.png" alt="">
@@ -139,7 +148,7 @@ $conn->close();
             </div>
         </div>
     </div>
- 
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -165,7 +174,8 @@ $conn->close();
         });
     </script>
 </body>
- <?php
-    include('./includes/script.php');
-    ?>
+<?php
+include('./includes/script.php');
+?>
+
 </html>

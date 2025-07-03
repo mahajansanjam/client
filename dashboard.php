@@ -36,7 +36,7 @@
                             <span class="left-icon-hide">Employee</span>
                             <i class="fa fa-caret-down dropdown-icon"></i>
                         </a>
-                       <ul class="sub-menu">
+                        <ul class="sub-menu">
 
                             <li><a href="employees_detail.php">
                                     <span class="left-icon-hide"> Employee Details</span>
@@ -47,6 +47,15 @@
                                         Schedule Interview
                                     </span></a></li>
                         </ul>
+                    </li>
+
+                    <li><a href="create_role.php">
+                            <img src="./images/home.png" alt="">
+                            <span class="left-icon-hide">Create Role</span></a>
+                    </li>
+                    <li><a href="assign_rights.php">
+                            <img src="./images/home.png" alt="">
+                            <span class="left-icon-hide">Assign Rights</span></a>
                     </li>
                     <li class="logout-icon">
                         <a href="logout.php">
@@ -77,10 +86,11 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </body>
- <?php
-    include('./includes/script.php');
-    ?>
+<?php
+include('./includes/script.php');
+?>
+
 </html>

@@ -218,8 +218,7 @@
     </div>
     <!-- right-sidebar close div -->
     </div>
-
-
+    
     <!-- success modal  -->
     <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
