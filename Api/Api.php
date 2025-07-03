@@ -48,10 +48,11 @@ if ($method == 'POST') {
     $select_experience = $input['experience'] ?? '';
     $salary = $input['salary'] ?? '';
     $releving_date = $input['relevingdata'] ?? '';
+    $employee_id=$input['employee_id']??'';
 
     // Insert into employee_details
-    $sql = "INSERT INTO employee_details (name, official_email, personal_email, mobile_number, home_number, department, desgination, joning_year, total_expierence, salary, relieving_date, noc, experience_letter)
-            VALUES ('$name', '$email', '$personal_email', '$mobile_number', '$home_number', '$select_departmentemployee', '$select_desginations', '$select_join_year', '$select_experience', '$salary', '$releving_date', '$noc_upload', '$experience_upload')";
+    $sql = "INSERT INTO employee_details (name, official_email, personal_email, mobile_number, home_number, department, desgination, joning_year, total_expierence, salary, relieving_date, noc, experience_letter,employee_id)
+            VALUES ('$name', '$email', '$personal_email', '$mobile_number', '$home_number', '$select_departmentemployee', '$select_desginations', '$select_join_year', '$select_experience', '$salary', '$releving_date', '$noc_upload', '$experience_upload','$employee_id')";
 
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;
